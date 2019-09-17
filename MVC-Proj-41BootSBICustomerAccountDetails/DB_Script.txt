@@ -1,0 +1,20 @@
+
+SQL> select * from SBICustomerDetails;
+
+        ID NAME                                     ACCOUNTTYPE
+---------- ---------------------------------------- --------------
+ACCOUNTNUMBER      BALANCE
+--------------- ----------
+       101 Sahoo Shree Raj Bijay                    Savings
+4567890SBI234      2350.35
+
+
+
+SQL> desc SBICustomerDetails;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(3)
+ NAME                                               VARCHAR2(40)
+ ACCOUNTTYPE                                        VARCHAR2(14)
+ ACCOUNTNUMBER                                      VARCHAR2(15)
+ BALANCE                                            NUMBER(10,2)

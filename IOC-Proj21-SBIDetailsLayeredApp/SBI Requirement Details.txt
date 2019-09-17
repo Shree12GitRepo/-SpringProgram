@@ -1,0 +1,13 @@
+=========================================Requirement Gather for SBI==============================================
+
+For SBI Details:-
+==============
+ID-> Auto Mated
+Bank Manager:- List Of Manager Names in India Branch.
+Branch Manager:-List Of Branch Manager.
+Accountant:-List Of Accountant Officer.
+SecurityGuard:-List Of SG 
+BranchName:-
+IFSC code
+DOJ:-Date Of Joining
+ 

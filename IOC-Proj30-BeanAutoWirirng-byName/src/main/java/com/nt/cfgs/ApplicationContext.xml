@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="default" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- DTDC class Configuration -->
+	<bean id="dtdc" class="com.nt.Beans.CourierDTDC">
+		<property name="cusname" value="Shree raj"/>
+		<property name="location" value="Hyd"/>
+		<property name="price" value="376"/>
+		<property name="item" value="T-Shirt"/>
+	</bean>
+	
+	<!-- Flipkart Configuration -->
+	<bean id="fkrt" class="com.nt.Beans.Flipkart" autowire="byName">
+		<!-- <constructor-arg ref="dtdc"/> -->
+	</bean>
+	
+
+</beans>

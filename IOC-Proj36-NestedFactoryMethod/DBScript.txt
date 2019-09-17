@@ -1,0 +1,36 @@
+
+SQL> create table SimDistributor(id number(4),Dname varchar2(29),location varchar2(25),SimCompany varchar2(10));
+
+Table created.
+
+SQL> insert into SimDistributor values(101,'Pankaj Pradhan','Kakatpur','AIRTEL');
+
+SQL> SELECT * FROM SIMDISTRIBUTOR
+  2  ;
+
+        ID DNAME                         LOCATION                  SIMCOMPANY
+---------- ----------------------------- ------------------------- ----------
+       101 Pankaj Pradhan                Kakatpur                  AIRTEL
+       102 Sahoo shree raj Bijay         Astarang                  IDEA
+       103 Amit Ku Rath                  Nimapara                  JIO
+       104 Pratik Sahani                 PIPIL                     AIRTEL
+       105 MAHESWAR BARIK                CHARICHAK                 IDEA
+       106 RAKESH KU SAHOO               KONARK                    AIRTEL
+       107 GYNA RANJAN BEHERA            KAKATPUR                  JIO
+       108 SUJIT DASH                    KAKATPUR                  IDEA
+
+8 rows selected.
+
+
+SQL> select * from SimDistributor where Simcompany in('AIRTEL','IDEA');
+
+        ID DNAME                         LOCATION                  SIMCOMPANY
+---------- ----------------------------- ------------------------- ----------
+       101 Pankaj Pradhan                Kakatpur                  AIRTEL
+       102 Sahoo shree raj Bijay         Astarang                  IDEA
+       104 Pratik Sahani                 PIPIL                     AIRTEL
+       105 MAHESWAR BARIK                CHARICHAK                 IDEA
+       106 RAKESH KU SAHOO               KONARK                    AIRTEL
+       108 SUJIT DASH                    KAKATPUR                  IDEA
+
+6 rows selected.

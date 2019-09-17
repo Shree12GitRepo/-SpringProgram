@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- VotingRights Cfgs.. -->
+	<bean id="cvr" class="com.nt.VotingBeans.checkVotingrights" init-method="check" destroy-method="destroytype"> 
+		<property name="name" value="Shreeraj" />
+		<property name="age" value="24"/>
+		<property name="adrs" value="Odisha"/>
+	</bean>
+
+</beans>

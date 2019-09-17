@@ -1,0 +1,15 @@
+SQL> create table SBI_All_Info(id number(10),Branch_name varchar2(30),Bank_manager_name varchar2(25),Branch_manager_name varchar2(25),Accountant_name varchar2(25),SecurityGuard_Name varchar2(25),IFSC_code number(8),DOJ Date);
+
+Table created.
+
+SQL> desc SBI_ALL_INFO;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(10)
+ BRANCH_NAME                                        VARCHAR2(30)
+ BANK_MANAGER_NAME                                  VARCHAR2(25)
+ BRANCH_MANAGER_NAME                                VARCHAR2(25)
+ ACCOUNTANT_NAME                                    VARCHAR2(25)
+ SECURITYGUARD_NAME                                 VARCHAR2(25)
+ IFSC_CODE                                          NUMBER(8)
+ DOJ                                                DATE

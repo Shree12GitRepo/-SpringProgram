@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="date" class="java.util.Date">
+		
+	</bean>
+	<!-- Dependent Class Object -->
+	<bean id="dep" class="com.DependentClass.Dep.DependentTest">
+		<constructor-arg type="String" value="Ravi"></constructor-arg>
+	</bean>
+	<bean id="dep1" class="com.DependentClass.Dep.DependentTest">
+		
+	</bean>
+	<bean id="wmg" class="com.Spring.SetterInject.SetterInjection">
+		 <!-- <property name="Name" value="Raja"></property> -->
+	<!--	<property name="dt" ref="date"></property>
+		 -->
+		<constructor-arg type="String" value="vinod"/>
+		<property name="Det" ref="dep"></property>
+		
+	</bean>
+	
+	<bean id="ewmg" class="com.Spring.SetterInject.SetterInjection">
+		<constructor-arg type="int" value="10"/>
+		<constructor-arg type="int" value="20"/>
+		</bean>
+	
+</beans>

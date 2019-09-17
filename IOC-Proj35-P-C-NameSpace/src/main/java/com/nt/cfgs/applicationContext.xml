@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Date Class Cfgs.. -->
+	<bean id="dt" class="java.util.Date" p:year="118" p:month="7" p:date="12"/>
+	<!-- Car class Configuration -->
+	<bean id="car" class="com.nt.Car.Car" p:name="Baleno" p:model="Bal-2FC-12" p:dop-ref="dt"/>
+	<!-- Owner Class Cfgs -->
+	<bean id="owner" class="com.nt.Owner.Owner" c:name="SriRaj" c:mob_no="7787911006" c:dob="12/05/1995" c:car-ref="car"/>
+
+</beans>

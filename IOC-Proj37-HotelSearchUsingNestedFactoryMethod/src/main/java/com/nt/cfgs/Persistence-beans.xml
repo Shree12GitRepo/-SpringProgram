@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- ApacheDBCP cfgs.. -->
+	<bean id="apDBCP" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+		<property name="username" value="hr"/>
+		<property name="password" value="Sahoosilu77"/>
+	</bean>
+	
+	<!-- DAO Cfgs -->
+	<bean id="hotelDAO" class="com.nt.DAO.HotelSearchDAOIMPL" c:ds-ref="apDBCP"/>
+	
+</beans>

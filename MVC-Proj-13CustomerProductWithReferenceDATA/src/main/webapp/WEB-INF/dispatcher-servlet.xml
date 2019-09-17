@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<!-- HandlerMapping cfgs.. -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="customer.htm">cfc</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- Properties file Configuration... -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="com.CP.Commons.Validation"/>
+	</bean>
+	<!-- Controller Configuration... -->
+	<bean id="cfc" class="com.CP.controller.CustomerFormController">
+		<property name="commandClass" value="com.CP.Command.CustomerCommand"/>
+		<property name="commandName" value="cusCMD"/>
+		<property name="formView" value="customer_form"/>
+		<property name="successView" value="customer_result"/>
+		<property name="sessionForm" value="true"/>
+		<property name="validator">
+			<bean class="com.CP.Validator.CustomerValidation"/>
+		</property>
+	</bean>
+	
+	
+	
+	<!-- ViewResolver Config.. -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+</beans>

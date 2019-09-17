@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="mobDet" class="com.nt.Beans.MobileDetails">
+		<constructor-arg name="earPhone"><null/></constructor-arg>
+		<constructor-arg name="mobileName" value="Motorola"/>
+		<constructor-arg name="sims">
+			<map>
+				<entry key="Sim1">
+					<value>IDEA</value>
+				</entry>
+				<entry key="Sim2">
+					<value>Airtel</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+</beans>

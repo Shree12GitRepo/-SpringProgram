@@ -1,0 +1,14 @@
+
+SQL> select * from login;
+
+USERNAME           PASSWORD
+------------------ --------------------
+Jeeban             daafa
+RajSriRaj          Sahoosilu77
+SQL> desc Login;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                           VARCHAR2(18)
+ PASSWORD                                           VARCHAR2(20)
+
+SQL>

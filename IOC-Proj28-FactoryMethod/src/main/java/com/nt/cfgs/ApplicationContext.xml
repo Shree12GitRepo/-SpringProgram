@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- Static Factory Method -->
+	<bean id="date" class="java.lang.Class" factory-method="forName">
+		<constructor-arg value="java.util.Date"/>
+	</bean>
+	<bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+	<!-- Instacne Factory Method.. -->
+	<bean id="str1" class="java.lang.String">
+		<constructor-arg value="Hello"/>
+	</bean>
+	<bean id="str2" factory-bean="str1" factory-method="concat">
+		<constructor-arg value=" How Are You. ?"/>
+	</bean>
+	
+	<bean id="sb1" class="java.lang.StringBuffer">
+		<constructor-arg value="hello How Ar You"/>
+	</bean>
+	<bean id="str3" class="java.lang.String" factory-bean="sb1" factory-method="substring">
+		<constructor-arg value="0"/>
+		<constructor-arg value="5"/>
+	</bean>
+</beans>

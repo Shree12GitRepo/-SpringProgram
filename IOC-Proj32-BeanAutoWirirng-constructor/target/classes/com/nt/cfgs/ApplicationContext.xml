@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- DTDC class Configuration -->
+	<bean id="dtdc1" class="com.nt.Beans.CourierDTDC">
+		<!-- <property name="cusname" value="Shree raj"/>
+		<property name="location" value="Hyd"/>
+		<property name="price" value="376"/>
+		<property name="item" value="T-Shirt"/> -->
+		<constructor-arg name="cusname" value="radhe"/>
+		<constructor-arg name="location" value="Odisha"/>
+		<constructor-arg name="price" value="564"/>
+		<constructor-arg name="item" value="Shirt"/>
+	</bean>
+	<bean id="dtdc" class="com.nt.Beans.CourierDTDC">
+		<property name="cusname" value="Shree raj"/>
+		<property name="location" value="Hyd"/>
+		<property name="price" value="376"/>
+		<property name="item" value="T-Shirt"/>
+		<!-- <constructor-arg name="cusname" value="GopiNath"/>
+		<constructor-arg name="location" value="Hyd"/>
+		<constructor-arg name="price" value="376"/>
+		<constructor-arg name="item" value="T-Shirt"/> -->
+	</bean>
+	<bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+	
+	<!-- Flipkart Configuration -->
+	<!-- <bean id="fkrt" class="com.nt.Beans.Flipkart" autowire="default"/> -->
+	
+		<!-- <bean id="fkrt" class="com.nt.Beans.Flipkart" autowire="constructor"/> -->
+	
+	<!-- <bean id="fkrt" class="com.nt.Beans.Flipkart" autowire="constructor" >
+		<property name="dtdc" ref="dtdc"/>
+		
+	</bean> --> 
+	<!-- 
+	<bean id="fkrt" class="com.nt.Beans.Flipkart" autowire="byType" >
+		<property name="dtdc" ref="dtdc1"/>
+	</bean>  -->
+		<!-- <bean id="fkrt2" class="com.nt.Beans.Flipkart" autowire="constructor"/> -->
+	
+	
+	
+	
+
+</beans>

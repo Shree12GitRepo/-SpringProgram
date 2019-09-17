@@ -1,0 +1,11 @@
+SQL> desc Student_info;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(30)
+ ROLL                                               NUMBER(5)
+ ADDRESS                                            VARCHAR2(30)
+ MARK1                                              NUMBER(3)
+ MARK2                                              NUMBER(3)
+ MARK3                                              NUMBER(3)
+ TOTALMARK                                          NUMBER(3)
+ PERCENTAGE                                         NUMBER(3)

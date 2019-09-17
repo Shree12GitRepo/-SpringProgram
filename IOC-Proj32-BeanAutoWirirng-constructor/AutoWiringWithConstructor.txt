@@ -1,0 +1,26 @@
+autowire="constructor"
+==========================
+In this case it perform Implicity Constructor Injections.
+
+If we are taking two dependent Bean Constructor Injection and perform autowire="constructor" 
+then it will execute based on the Property name of target class and bean id of Dependent class.
+and if both bean id are not match with it's target class property name then it will give 
+ambiguty exceptions.
+
+To OverCome AmbiguityException we need to use primary="true" One of it's Dependent Beans.
+
+If in the target class no-param constructor is not enable then it will give Ambiguity Exception Otherwise
+it will give null value.
+
+If in target Beans we are keeping higest parameter constructor and we are doing autowire="constructor"
+then the highest Parameter construtor will execute.
+
+If we change the Order Of Constructor Parameter that to be both parameter constructor are enabled then 
+it will execute based on order of placing in the target class. 
+
+If we are performing both autoWiring="byType" and explicitly property type injection then it will execute
+explicte Property type. In this case 
+-> What is the Situation where we face AmbiguityException.?
+If the dependent bean id is not compatible with Property name of traget class then we will get Ambiguity 
+in enabling constructor injection.
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/jee https://www.springframework.org/schema/jee/spring-jee-4.3.xsd">
+
+	<bean id="hmpid" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="home.htm">pvc</prop>
+				<prop key="empdetails.htm">ed</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="wellcome"/>
+	</bean>
+	<bean id="ed" class="com.Employee.Controller.EmployeeHandler">
+		<constructor-arg ref="empService"/>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="WEB-INF/Pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+</beans>

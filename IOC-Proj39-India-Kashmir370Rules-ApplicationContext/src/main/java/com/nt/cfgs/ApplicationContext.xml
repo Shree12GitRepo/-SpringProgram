@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="kashmir"  class="com.nt.Beans.Kashmir" scope="prototype">
+		<property name="districts">
+			<array>
+				<value>Shopain</value>
+				<value>Ganderbal</value>
+				<value>BanDipora</value>
+				<value>Budgam</value>
+			</array>
+		</property>
+		<property name="capitals" value="Jammu and Srinagar"/>
+		<property name="area" value="30000"/>
+	</bean> -->
+	
+	<!-- cfgs India -->
+	<bean id="india" class="com.nt.Beans.India" scope="singleton" lazy-init="true">
+		<property name="code" value="91"/>
+		<property name="area" value="120000000.345f"/>
+		<!-- <property name="ksmr" ref="kashmir"/> for Scope="protoType"-->
+		<!-- <property name="ksmr" ref="kashmir" /> -->
+	</bean>
+	
+	<bean id="kashmir"  class="com.nt.Beans.Kashmir" scope="prototype" >
+		<property name="districts">
+			<array>
+				<value>Shopain</value> 
+				<value>Ganderbal</value>
+				<value>BanDipora</value>
+				<value>Budgam</value>
+			</array>
+		</property>
+		<property name="capitals" value="Jammu and Srinagar"/>
+		<property name="area" value="30000"/>
+	</bean>
+	 
+	
+
+</beans>

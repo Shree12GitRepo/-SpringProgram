@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Collection Properties Bean Class Config -->
+	<bean id="OItms" class="com.nt.Beans.OrderItems">
+		<constructor-arg name="items">
+			<array>
+				<value>AmulSpray</value>
+				<value>ProtinX</value>
+				<value>Fruits</value>
+			</array>
+		</constructor-arg>
+		<property name="items">
+			<array>
+				<value>PanT</value>
+				<value>Shirt</value>
+				<value>T-Shirt</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!-- SimTypes Class Configuration -->
+	<bean id="smTpe" class="com.nt.Beans.SimTypes">
+		<property name="sims">
+			<list>
+				<value>Airtel</value>
+				<value>IDEA</value>
+				<value>JIO</value>
+				<value>BSNL</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Student Class Configuration -->
+	<bean  class="com.nt.Beans.StudentBeans">
+		<constructor-arg name="date">
+			<list>
+			<ref bean="DoJng"/>
+			<ref bean="Dobth"/>
+			</list>
+		</constructor-arg>
+		<!-- <property name="date">
+			<list>
+			<ref bean="DoJng"/>
+			<ref bean="Dobth"/>
+			</list>
+		</property> -->
+		<property name="rollNo" value="101"/>
+		<property name="name" value="ShreeRaj"/>
+		<property name="marks">
+			<array>
+				<value>78</value>
+				<value>89</value>
+				<value>98</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!-- Date BeanConfiguration -->
+	
+	<bean id="Sysdate" class="java.util.Date"/>
+	
+	<bean id="DoJng" class="java.util.Date">
+		<property name="year" value="129"/>
+		<property name="month" value="7"/>
+		<property name="date" value="16"/>
+	</bean>
+	
+	<bean id="Dobth" class="java.util.Date">
+		<property name="year" value="5"/>
+		<property name="month" value="5"/>
+		<property name="date" value="12"/>
+	</bean>
+	<!-- Fruit Bean configuration -->
+	<!-- HashSet Configuration -->
+	<bean id="hashSet" class="java.util.HashSet">
+		
+	</bean>
+	<bean id="fruits" class="com.nt.Beans.FruitsColor">
+		<constructor-arg name="fruits">
+			<set>
+				<value>Orange</value>
+				<value>Orange</value>
+				<value>Grapes</value>
+				<value>Apple</value>
+				<value>DraganFruits</value>
+			</set>
+		</constructor-arg>
+		
+	</bean>
+	<!-- DaYsandMont Class Configuration -->
+	
+	<bean id="dmnth" class="com.nt.Beans.MonthDays">
+		<property name="monthAndDays">
+			<map>
+				<entry key="Jan">
+					<value>31</value>
+				</entry>
+				<entry key="Feb" value="28"/>
+				
+				<entry value="31">
+					<key><value>Mar</value></key>
+				</entry>
+				
+				<entry key="Date" value-ref="Sysdate"/>
+				
+			</map>
+		</property>
+	</bean>
+	<!-- FacultyProfile Configuration -->
+	<bean id="facultyprof" class="com.nt.Beans.FacultyProfile">
+		<constructor-arg name="facultyprofile">
+			<props>
+				<prop key="CoreJava">Hari Krishna</prop>
+				<prop key="Adv Java">Natraz Chowdhury</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+</beans>

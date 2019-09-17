@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-merge="default" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="diplomaCourse" class="com.nt.Beans.DIplomaCourse" abstract="true">
+		<constructor-arg name="corse">
+			<list>
+				<value>English</value>
+				<value>C Language</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="Mechanical" class="com.nt.Beans.EnggCourse" parent="diplomaCourse">
+		<constructor-arg name="corse">
+				<list merge="true">
+					<value>Course-X</value>
+					<value>Course-Y</value>
+				</list>
+		</constructor-arg>
+	</bean>
+	
+</beans>

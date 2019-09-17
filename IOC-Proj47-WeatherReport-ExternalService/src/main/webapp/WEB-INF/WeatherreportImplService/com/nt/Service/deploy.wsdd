@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from WeatherreportImplService WSDL service -->
+
+  <service name="WeatherreportImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://Service.nt.com"/>
+      <parameter name="wsdlServiceElement" value="WeatherreportImplService"/>
+      <parameter name="schemaQualified" value="http://Service.nt.com"/>
+      <parameter name="wsdlServicePort" value="WeatherreportImpl"/>
+      <parameter name="className" value="com.nt.Service.WeatherreportImpl"/>
+      <parameter name="wsdlPortType" value="WeatherreportImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://Service.nt.com" xmlns:retNS="http://Service.nt.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="weatherReport" qname="operNS:weatherReport" returnQName="retNS:weatherReportReturn" returnType="rtns:float" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="weatherReport"/>
+
+  </service>
+</deployment>

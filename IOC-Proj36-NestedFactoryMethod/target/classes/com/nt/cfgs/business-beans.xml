@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!--HikariCP  cfgs -->
+	<bean id="dsHCP" class="com.zaxxer.hikari.HikariDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+		<property name="username" value="hr"/>
+		<property name="password" value="Sahoosilu77"/>
+	</bean>
+	
+	<!-- DAO cfgs -->
+	<bean id="simDAO" class="com.nt.DAO.SIMDistributorDAOImpl">
+		<constructor-arg ref="dsHCP"/>
+	</bean>
+	
+	<!-- Service cfgs -->
+	<bean id="simService" class="com.nt.Service.SIMDistributorServiceImpl">
+		<constructor-arg ref="simDAO"/>
+	</bean>
+	
+</beans>

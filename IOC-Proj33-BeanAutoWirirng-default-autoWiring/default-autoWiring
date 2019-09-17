@@ -1,0 +1,8 @@
+default-autoWiring="<5 Type name>"
+===================================
+If we are taking default-autoWiring in the <beans> tag and if we are not giving any wirring property 
+in target class then the default-autowiring property value will reflect to the whole<bean> tag, Otherwise
+the target class auto-aire Override the default-autowire values.
+
+If we are taking default-autowire="any 4 type" except "default" and in target <bean autowire="default"> then
+it will take the <beans default-autowire="constructor">tag property value.

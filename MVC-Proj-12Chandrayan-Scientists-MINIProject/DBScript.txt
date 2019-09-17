@@ -1,0 +1,8 @@
+SQL> desc INDIAN_SCIENTISTS;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(3)
+ NAME                                               VARCHAR2(32)
+ DOMAIN                                             VARCHAR2(20)
+ EXPERIENCE                                         NUMBER(5)
+ PETENETS											NUMBER(10)

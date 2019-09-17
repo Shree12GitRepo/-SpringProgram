@@ -1,0 +1,16 @@
+
+SQL> create table Patientdetails_ShreeMedical (Id number,PName varchar2(30),PAdd varchar2(30),disease varchar2(30),DoctConsltnt varchar2(30),RegistrationDateAndTime TimeStamp);
+
+Table created.
+
+SQL> desc Patientdetails_shreeMedical ;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER
+ PNAME                                              VARCHAR2(30)
+ PADD                                               VARCHAR2(30)
+ DISEASE                                            VARCHAR2(30)
+ DOCTCONSLTNT                                       VARCHAR2(30)
+ REGISTRATIONDATEANDTIME                            TIMESTAMP(6)
+ 
+  INSERT INTO Patientdetails_shreeMedical VALUES(1,'SAHOO SHREE RAJ BIJAY','ODISHA','PSYCHO','DR.OMM PRAKSH JENA',TO_DATE('2003/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'));

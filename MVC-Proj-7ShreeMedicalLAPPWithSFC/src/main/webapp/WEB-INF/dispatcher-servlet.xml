@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	
+	<!-- Handler Mapping configuration -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="patient.htm">pdc</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Handlerclass Or Controller Config -->
+	<bean id="pdc" class="com.ShreeMedical.Controller.PatientDetailsControll">
+		<constructor-arg ref="patientService"/>
+		<property name="commandName" value="patientCMD"/>
+		<property name="commandClass" value="com.ShreeMedical.Command.PatientDetailsCommand"/>
+		<property name="formView" value="patient_form"/>
+		<property name="successView" value="patinet_List"/>
+		<property name="sessionForm" value="true"/>
+	</bean>
+	
+	<!-- Logical View Object Confg -->
+	<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+</beans>

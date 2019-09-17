@@ -1,0 +1,14 @@
+autowiring="byName":-
+====================
+In this case if we are placing default-autowire="any value" and in the bean tag suppose to be used 
+autoWiring="byName" then it will give correct result.
+
+-> If we are placing default-autowire="default" in <beans> tag and not perform any autowire in <bean>
+then it won't perform beanWiring.
+
+->	If we are placing both Setter and Constructor and taking that class as autoWiring="byName" then
+	constructor injection Override the Setter Injection print the Constructor Injectioin Value. 
+	
+->	In this case we are not getting any ambiguity problem because as per the BeanWiring rules the ID of
+	Dependent class must be compatible with the target bean property name.But in this case Same ID 
+	won't possible in Configuration file.

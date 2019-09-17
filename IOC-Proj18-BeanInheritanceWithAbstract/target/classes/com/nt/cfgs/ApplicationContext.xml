@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- RBI Parnent Configuration -->
+	<bean id="BankDetails" class="com.nt.Beans.BankDetails" abstract="true">
+		<property name="loan" value="12%"></property>
+	</bean>
+	<!-- SBI Child Configuration -->
+	<bean id="SBI" parent="BankDetails">
+		<property name="bankLoc" value="ChandiGarh"/>
+		<property name="bankName" value="SBI"/>
+		<property name="ifsc" value="34578923"/>
+		
+	</bean>
+	<!-- ICICI Child Configuration -->
+	<bean id="ICICI" parent="BankDetails">
+		<property name="bankLoc" value="ODISHA"/>
+		<property name="bankName" value="ICICI"/>
+		<property name="ifsc" value="3457891"/>
+		<property name="loan" value="18%"/>
+		
+	</bean>
+</beans>

@@ -1,0 +1,6 @@
+SQL> select * from MVC_EMPLOYEE;
+
+    EMP_NO EMP_NAME                  EMP_BASICSAL EMP_GROSSSAL EMP_NETSAL
+---------- ------------------------- ------------ ------------ ----------
+       100 ShreeRaj                         55000        87000   98123.34
+       101 Ramesh                           54000        45000   98234.34

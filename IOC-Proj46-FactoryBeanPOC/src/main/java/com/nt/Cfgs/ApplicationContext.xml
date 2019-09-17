@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- Cfg FactoryBean... -->
+	<bean id="irctc" class="com.nt.FactoryBean.IRCTCFactoryBean"/>
+	
+	<!-- Cfg FactoryBean2 -->
+	<bean id="irctc2" class="com.nt.FactoryBean.IRCTCFactoryBean2"/>
+	
+	<!-- Cfg MakeMyTrip.. -->
+	<bean id="mktrp" class="com.nt.Beans.MakemyTrip" >
+		<property name="irctc" ref="irctc"/>
+		<property name="passengername" value="Shree raj"/>
+		<property name="from" value="BBSR"/>
+		<property name="to" value="Hyd"/>
+	</bean>
+	<!-- we can use factory-bean and factory-method by returning other class Object and refering that Object bean id in our target class Property tag-->
+	<bean id="irctcObj3" class="com.nt.FactoryBean.IRCTC" factory-bean="irctc2" factory-method="getIRCTC"/>
+	
+	<bean id="mktrp2" class="com.nt.Beans.MakemyTrip" >
+		<property name="irctc" ref="irctcObj3"/>
+		<property name="passengername" value="Shree raj"/>
+		<property name="from" value="BBSR"/>
+		<property name="to" value="Hyd"/>
+	</bean>
+	
+</beans>

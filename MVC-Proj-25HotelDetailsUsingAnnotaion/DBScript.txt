@@ -1,0 +1,22 @@
+
+SQL> create table HotelSearch(id number(4),name varchar2(34),State varchar2(10),City varchar2(12),Couplefrndly varchar2(4), Type varchar2(5));
+
+SQL> insert into HotelSearch values(101,'Shree Hotel and Lodge','ODISHA','KAKATPUR','YES','3STAR');
+
+1 row created.
+
+
+SQL> SELECT * FROM HOTELSEARCH;
+
+        ID NAME                               STATE      CITY         COUP TYPE
+---------- ---------------------------------- ---------- ------------ ---- -----
+       101 Shree Hotel and Lodge              ODISHA     KAKATPUR     YES  3STAR
+       102 Durga Hotel and Lodge              ODISHA     KAKATPUR     NO   2STAR
+       103 HOTEL BLUE                         ODISHA     KAKATPUR     YES  2STAR
+       104 ADITYA HOMETOL                     TELENGANA  AMERPET      NO   4STAR
+       105 ADITYA HOMETOL                     TELENGANA  BELKUMPET    YES  4STAR
+       106 SHREE HOTEL DD                     TELENGANA  HITEC-HCITY  NO   3STAR
+       107 SHREE HOTEL AND LODGE              TELENGANA  HITEC-HCITY  NO   3STAR
+       108 HOTEL PARADISE                     TELENGANA  HITEC-HCITY  YES  4STAR
+
+8 rows selected.

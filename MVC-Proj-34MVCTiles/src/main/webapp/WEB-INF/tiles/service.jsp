@@ -1,0 +1,3 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<p>With two conference halls and a multi-purpose hall, the hotel caters to diverse needs of business guests. These halls are fully equipped to organise different corporate events or parties. For those on leisure trips, the hotel organises sightseeing tours to the nearby cities places like Puri, Konark and Chilika.</p>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- RBI Parnent Configuration -->
+	<bean id="BankDetails" class="com.nt.Beans.BankDetails" abstract="true">
+		<!-- <property name="loan" value="12%"></property> -->
+		<constructor-arg name="loan" value="12%"/>
+	</bean>
+	<!-- SBI Child Configuration -->
+	<bean id="SBI" parent="BankDetails">
+		<constructor-arg name="bankLoc" value="ChandiGarh"/>
+		<constructor-arg name="bankName" value="SBI"/>
+		<constructor-arg name="ifsc" value="34578923"/>
+		
+	</bean>
+	<!-- ICICI Child Configuration -->
+	<bean id="ICICI" parent="BankDetails">
+		<constructor-arg name="bankLoc" value="ODISHA"/>
+		<constructor-arg name="bankName" value="ICICI"/>
+		<constructor-arg name="ifsc" value="3457891"/>
+		<constructor-arg name="loan" value="18%"/>
+		
+	</bean>
+</beans>
+
+<!-- In this above Case Constructor Injection is perofrmming by taking both child element and parent element at a time to pass Constructor parameter -->

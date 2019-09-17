@@ -1,0 +1,7 @@
+autowire="byType":-
+====================
+->	In this case only setter injection will perform.
+->	Dependent class name and Target class Property Type must be Compatible.
+->	Here Ambiguity problem maight be raised if we will take two Bean configuration.
+->	To solve these Ambiguity in this Type we will take primary="true" in one of the dependent 
+	Bean configuration.

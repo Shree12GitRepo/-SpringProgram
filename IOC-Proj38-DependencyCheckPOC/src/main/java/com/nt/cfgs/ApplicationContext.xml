@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-dependency-check="all" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- Dependent Class cfg -->
+	<bean id="dpndt" class="com.nt.Beans.Dependent" dependency-check="none">
+		<property name="name" value="Suresh"/>
+		<!-- <property name="no" value="12"/> -->
+	</bean>
+	<!-- Target Class Cfgs.. -->
+	<bean id="target" class="com.nt.Beans.Target" dependency-check="objects">
+		<property name="depen" ref="dpndt"/>
+	</bean>
+</beans>

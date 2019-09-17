@@ -1,0 +1,15 @@
+
+SQL> desc CollegeCredentials;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ UNAME                                     NOT NULL VARCHAR2(27)
+ PASSWORD                                           VARCHAR2(20)
+ STATUS                                             NUMBER(2)
+
+SQL> Select * from CollegeCredentials;
+
+UNAME                       PASSWORD                 STATUS
+--------------------------- -------------------- ----------
+raja                        rani                          1
+jani                        hyd                           1
+rani                        rani                          1

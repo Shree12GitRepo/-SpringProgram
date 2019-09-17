@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		
+		<!-- Dependent Class Cfgs.. -->
+		
+		<!-- <bean id="engg" class="com.nt.Beans.Engine">
+			<property name="enggnumber" value="1234rrty"/>
+			<property name="enggCC" value="125cc"/>
+		</bean> -->
+		
+		<!-- Target Class Cfgs.. -->
+		<bean id="veichle" class="com.nt.Beans.Veichle">
+			<property name="engg" value="1234rrty,125cc"/>
+			<property name="modelName" value="Yamha-23f"/>
+			<property name="veichleType" value="Racing"/>
+		</bean>
+		
+		<!-- Bean Post Processor Cfgs.. -->
+		<bean id="rbpp" class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+		
+		<!-- <context:annotation-config/> -->
+		
+		<!-- Custom Editor Cfgs... -->
+		<bean id="ceg" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+			<property name="customEditors">
+				<map>
+					<entry key="com.nt.Beans.Engine.java" value="com.nt.editor.CustomEngineEditor"/>	
+				</map>
+			</property>
+		</bean>
+		
+</beans>
