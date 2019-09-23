@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans profile="test" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- DriverMgr Cfg -->
+<bean id="drdc" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+	<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+	<property name="user" value="hr"/>
+	<property name="password" value="Sahoosilu77"/>
+</bean>
+	<!--DAO Class Object  -->
+<bean id="dao" class="com.Student_info.DAO.Student_infoDAOImpl">
+	<constructor-arg ref="drdc"/>
+</bean>
+</beans>
